@@ -175,4 +175,42 @@ print(dct1)
 
 
 
+# map 함수를 사용하는 것과 아닌 것의 차이
+
+# 리스트에 값을 하나씩 더해서 새로운 리스트를 만드는 작업
+myList = [1, 2, 3, 4, 5]
+
+# for 반복문 이용
+result1 = []
+for val in myList:
+    result1.append(val + 1)
+print(f'result1 : {result1}')
+
+# map 함수 이용
+def add_one(n):
+    return n + 1
+result2 = list(map(add_one, myList)) # map 반환을 list로 변환
+print(f'result2 : {result2}')
+
+
+
+
+
+# 리스트와 map 함수
+import math
+
+# 리스트의 값을 정수 타입으로 변환
+result1 = list(map(int, [1.1, 2.2, 3.3, 4.4, 5.5]))
+print(f'map(intm 리스트) : {result1}')
+
+# 리스트 값 제곱
+def func_pow(x):
+    return pow(x, 5) # x의 5제곱을 반환
+result2 = list(map(func_pow, [1,2,3,4,5]))
+print(f'map(func_pow, 리스트) : {result2}')
+
+# 리스트 값 소수점 올림
+result3 = list(map(math.ceil, [1.1, 2.2, 3.3, 4.4, 5.5, 6.6]))
+print(f'map(func_ceil, 리스트) : {result3}')
+
 
