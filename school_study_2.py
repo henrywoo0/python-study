@@ -97,10 +97,80 @@ print(queue)
 
 
 
+# 리스트 자료구조
+stack = []
+stack.append(5)
+stack.append(3)
+stack.append(8)
+stack.append(6)
+stack.append(4)
+stack.pop()
+stack.append(1)
+stack.pop()
+print(stack)
+print(stack[0])
+print(stack[::-1]) # Extended Slices
+print('stack pop', stack.pop())
+print('stack pop', stack.pop())
+print('stack pop', stack.pop())
+print('stack pop', stack.pop())
 
 
 
 
+# 리스트 index 연습
+a = []*6
+print(a)
+a = [0, 2, 3, 4, 5, 1]
+print(a)
+for i in range(1, 6):
+    a[i] = a[a[i]]
+print(a)
+for i in range(1, 6):
+    a[i] = a[a[i]]
+print(a)
+
+
+
+
+# 팩토리얼
+def f_iter(n):
+    r = 1
+    for i in range(1, n + 1):
+        r *= i
+    return r
+
+def f_rec(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * f_rec(n-1)
+
+print(f_iter(5))
+print(f_rec(5))
+
+
+
+
+
+# 딕셔너리 생성 (여러 빈칸이 있는 경우 처리법)
+d1 = {}
+k = input()
+v = input()
+d1[k] = v
+k = input()
+v = input()
+d1[k] = v
+print(d1)
+
+
+
+# 딕셔너리 생성 (빈칸이 한 번 있는 경우)
+dct1 = {}
+for _ in range(2):
+    k, v = input().split()
+    dct1[k] = v
+print(dct1)
 
 
 
